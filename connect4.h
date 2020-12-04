@@ -1,3 +1,4 @@
+#include <stdio.h>
 typedef struct board_structure *board;
 
 struct move{
@@ -16,8 +17,5 @@ int is_valid_move(struct move m, board u);
 char is_winning_move(struct move m, board u);
 void play_move(struct move m, board u);
 
-char current_winner(board u); 
-char next_player(board u); 
-
-
-
+char current_winner(board u);
+char next_player(board u);
