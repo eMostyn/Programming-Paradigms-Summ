@@ -1,0 +1,9 @@
+break;
+          case 'r':
+            reversed = 1;
+          break;
+          case 'n':
+            numerical = 1;
+          break;
+          case 'h':
+          printf("%s\n%s\n%s\n%s\n","-o specifies output file","-r reverses the sort order","-n for numerical values","Currently implemented, reverse, output file and numerical values");

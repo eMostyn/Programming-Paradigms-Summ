@@ -1,0 +1,184 @@
+
+
+
+
+
+
+
+
+
+
+
+
+                    } 
+                  } 
+                  } 
+                  } 
+                  } 
+                } 
+                } 
+                } 
+              } 
+            } 
+            } 
+        } 
+        } 
+        } 
+      }
+      }
+      }
+      }
+    }
+    }
+  }
+  }
+  }
+  }
+  }
+  }
+  }
+  }
+  }
+}
+}
+}
+Ø
+        ;a
+                amountOfStrings++;%
+              amountOfStrings = stringPos;l
+      //Arg is the file in input\
+          break;(
+          break;(
+    break;
+  //break; 
+                    break;1
+                    break;c
+          break;i
+        break;k
+          break;r
+          break;r
+    break;r
+    break;s
+    break;s
+      case'-':
+//  case 0:a
+    case 0:m
+    case 0:v
+    case 1:
+    case 1:
+          case 'h':a
+          case 'n':d
+          case'o':v
+          case 'r':1
+                char character = 's';n
+            char* inputFileName = argv[i];]
+                char *line = malloc(1*(sizeof(char)));
+            char* outputFileName = argv[i];e
+  char **strings = malloc(INITIAL_BUFFER * sizeof(char*));
+  const char* aa = *(const char **)a;
+  const char* aa = *(const char **)a;s
+  const char* bb = *(const char **)b;
+  const char* bb = *(const char **)b;s
+  //Convert them back to strings,
+          default:%
+      default :t
+#define INITIAL_BUFFER 1
+  else{
+                  else if(character == '\n'){a
+      else{p
+    else{p
+                    eof = 1;i
+              exit(1);
+                      exit(1);s
+                    exit(1);s
+                  exit(1);s
+            exit(1);s
+    exit(1);s
+    exit(1);s
+    exit(1);s
+                    {f
+                  {f
+              fclose(infile); 
+  FILE *infile;;
+  FILE *outfile;0
+  //Find if there is a leading number, 0 if not
+              fOpened = 1;
+        for(int i =0;i<amountOfStrings;i++){)
+        for(int i =0;i<amountOfStrings;i++){a
+      for(int i =amountOfStrings-1;i>=0;i--){
+      for(int i =amountOfStrings-1;i>=0;i--){
+          fprintf(outfile,"%s\n",strings[i] );
+        fprintf(outfile,"%s\n",strings[i] );{
+    fprintf(stderr,"Invalid number of arguments");i
+                  fprintf(stderr,"%s\n"," Failed to reserve memory for line");e
+                      fprintf(stderr,"%s\n"," Failed to reserve memory for line");f
+                    fprintf(stderr,"%s\n"," Failed to reserve memory for strings");
+    fprintf(stderr,"%s\n"," Failed to reserve memory for strings");
+            fprintf(stderr,"%s%s\n",argv[i]," is not a valid argument");s
+              fprintf(stderr,"Unable to create/find output file");i
+    fprintf(stderr,"Unable to find input file\n");
+          fprintf(stdout,"%s\n",strings[i] );
+        fprintf(stdout,"%s\n",strings[i] );)
+                free(line);;
+            i++;'
+    i++; 
+  if(aDigit == bDigit){
+                if(amountOfStrings>INITIAL_BUFFER){d
+  if(argc==1){;
+  if(fOpened == 0){e
+                  if(fscanf(infile,"%c",&character)==EOF){e
+            if(infile){
+                    if (line == NULL)e
+                if(line == NULL){o
+                  if(lineSize>INITIAL_BUFFER){
+    if(outfile != NULL){,
+      if(outfile != NULL){S
+            if(outfile == NULL){u
+                  if (strings == NULL)
+  if(strings == NULL){
+  //If they're equal then sort by string 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+            infile = fopen(inputFileName,"r");i
+  int aDigit = atoi(aa);e
+  int amountOfStrings = 0;"
+  int bDigit = atoi(bb);e
+int compareStrings(const void* a, const void* b){
+              int eof = 0;
+  int fOpened = 0;0
+  int i = 1;s
+                int lineSize = 1;
+int main( int argc, char *argv[] ){b
+  int numerical = 0;
+                int pos = 0;=
+  int reversed = 0;m
+              int stringPos = 0;X
+                    line = (char *) realloc(line, (lineSize+INITIAL_BUFFER)*(sizeof(char)));"
+                line[pos+1] = '\0';c
+                  line[pos] = character;\
+                  lineSize++;r
+            numerical = 1;
+            outfile = fopen(outputFileName,"w");)
+                  pos++;o
+          printf("%s\n%s\n%s\n%s\n","-o specifies output file","-r reverses the sort order","-n for numerical values","Currently implemented, reverse, output file and numerical values");
+    qsort(strings,amountOfStrings,sizeof(char *),compareNumericalStrings);t
+    qsort(strings,amountOfStrings,sizeof(char *),compareStrings);‹
+    return aDigit - bDigit;m
+    return strcmp(aa, bb);
+  //return strcmp(aa, bb);;
+  return strcmp(aa, bb);s
+            reversed = 1;e
+  //Reversed and numerical change depending on options in commandline
+  //Sort by differnce in number
+                strcpy(strings[stringPos],line);P
+                stringPos++;g
+                  strings = (char **) realloc(strings, (amountOfStrings+INITIAL_BUFFER)* sizeof(char*));r
+                strings[stringPos] = malloc(sizeof(line));
+    switch(argv[i][0]){
+        switch(argv[i][1]){ 
+  switch(numerical){U
+  switch(reversed){m
+                while(character != '\n'){ 
+              while(eof==0){=
+  while(i<argc){r

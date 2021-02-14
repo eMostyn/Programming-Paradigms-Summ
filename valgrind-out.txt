@@ -1,0 +1,336 @@
+==1341== Memcheck, a memory error detector
+==1341== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1341== Using Valgrind-3.15.0-608cb11914-20190413 and LibVEX; rerun with -h for copyright info
+==1341== Command: ./program
+==1341== Parent PID: 83
+==1341== 
+--1341-- 
+--1341-- Valgrind options:
+--1341--    --leak-check=full
+--1341--    --show-leak-kinds=all
+--1341--    --track-origins=yes
+--1341--    --verbose
+--1341--    --log-file=valgrind-out.txt
+--1341-- Contents of /proc/version:
+--1341--   Linux version 4.19.128-microsoft-standard (oe-user@oe-host) (gcc version 8.2.0 (GCC)) #1 SMP Tue Jun 23 12:58:10 UTC 2020
+--1341-- 
+--1341-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-ssse3-avx-avx2-bmi-f16c-rdrand
+--1341-- Page sizes: currently 4096, max supported 4096
+--1341-- Valgrind library directory: /usr/lib/x86_64-linux-gnu/valgrind
+--1341-- Reading syms from /mnt/c/Users/Elis/Documents/GitHub/Programming-Paradigms-Summ/program
+--1341-- Reading syms from /usr/lib/x86_64-linux-gnu/ld-2.31.so
+--1341--   Considering /usr/lib/x86_64-linux-gnu/ld-2.31.so ..
+--1341--   .. CRC mismatch (computed 6cded93a wanted 1af57820)
+--1341--   Considering /lib/x86_64-linux-gnu/ld-2.31.so ..
+--1341--   .. CRC mismatch (computed 6cded93a wanted 1af57820)
+--1341--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.31.so ..
+--1341--   .. CRC is valid
+--1341-- Reading syms from /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux
+--1341--    object doesn't have a symbol table
+--1341--    object doesn't have a dynamic symbol table
+--1341-- Scheduler: using generic scheduler lock implementation.
+--1341-- Reading suppressions file: /usr/lib/x86_64-linux-gnu/valgrind/default.supp
+==1341== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-1341-by-emostyn-on-???
+==1341== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-1341-by-emostyn-on-???
+==1341== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-1341-by-emostyn-on-???
+==1341== 
+==1341== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==1341== don't want to do, unless you know exactly what you're doing,
+==1341== or are doing some strange experiment):
+==1341==   /usr/lib/x86_64-linux-gnu/valgrind/../../bin/vgdb --pid=1341 ...command...
+==1341== 
+==1341== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==1341==   /path/to/gdb ./program
+==1341== and then give GDB the following command
+==1341==   target remote | /usr/lib/x86_64-linux-gnu/valgrind/../../bin/vgdb --pid=1341
+==1341== --pid is optional if only one valgrind process is running
+==1341== 
+--1341-- REDIR: 0x4022d80 (ld-linux-x86-64.so.2:strlen) redirected to 0x580c9ce2 (???)
+--1341-- REDIR: 0x4022b50 (ld-linux-x86-64.so.2:index) redirected to 0x580c9cfc (???)
+--1341-- Reading syms from /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_core-amd64-linux.so
+--1341--    object doesn't have a symbol table
+--1341-- Reading syms from /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so
+--1341--    object doesn't have a symbol table
+==1341== WARNING: new redirection conflicts with existing -- ignoring it
+--1341--     old: 0x04022d80 (strlen              ) R-> (0000.0) 0x580c9ce2 ???
+--1341--     new: 0x04022d80 (strlen              ) R-> (2007.0) 0x0483f060 strlen
+--1341-- REDIR: 0x401f560 (ld-linux-x86-64.so.2:strcmp) redirected to 0x483ffd0 (strcmp)
+--1341-- REDIR: 0x40232e0 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4843a20 (mempcpy)
+--1341-- Reading syms from /usr/lib/x86_64-linux-gnu/libc-2.31.so
+--1341--   Considering /usr/lib/x86_64-linux-gnu/libc-2.31.so ..
+--1341--   .. CRC mismatch (computed cd1655d1 wanted 09373696)
+--1341--   Considering /lib/x86_64-linux-gnu/libc-2.31.so ..
+--1341--   .. CRC mismatch (computed cd1655d1 wanted 09373696)
+--1341--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.31.so ..
+--1341--   .. CRC is valid
+--1341-- REDIR: 0x48f6600 (libc.so.6:memmove) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--1341-- REDIR: 0x48f5900 (libc.so.6:strncpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--1341-- REDIR: 0x48f6930 (libc.so.6:strcasecmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--1341-- REDIR: 0x48f5220 (libc.so.6:strcat) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--1341-- REDIR: 0x48f5960 (libc.so.6:rindex) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--1341-- REDIR: 0x48f7dd0 (libc.so.6:rawmemchr) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--1341-- REDIR: 0x4912e60 (libc.so.6:wmemchr) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--1341-- REDIR: 0x49129a0 (libc.so.6:wcscmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--1341-- REDIR: 0x48f6760 (libc.so.6:mempcpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--1341-- REDIR: 0x48f6590 (libc.so.6:bcmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--1341-- REDIR: 0x48f5890 (libc.so.6:strncmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--1341-- REDIR: 0x48f52d0 (libc.so.6:strcmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--1341-- REDIR: 0x48f66c0 (libc.so.6:memset) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--1341-- REDIR: 0x4912960 (libc.so.6:wcschr) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--1341-- REDIR: 0x48f57f0 (libc.so.6:strnlen) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--1341-- REDIR: 0x48f53b0 (libc.so.6:strcspn) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--1341-- REDIR: 0x48f6980 (libc.so.6:strncasecmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--1341-- REDIR: 0x48f5350 (libc.so.6:strcpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--1341-- REDIR: 0x48f6ad0 (libc.so.6:memcpy@@GLIBC_2.14) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--1341-- REDIR: 0x49140d0 (libc.so.6:wcsnlen) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--1341-- REDIR: 0x49129e0 (libc.so.6:wcscpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--1341-- REDIR: 0x48f59a0 (libc.so.6:strpbrk) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--1341-- REDIR: 0x48f5280 (libc.so.6:index) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--1341-- REDIR: 0x48f57b0 (libc.so.6:strlen) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--1341-- REDIR: 0x48fed20 (libc.so.6:memrchr) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--1341-- REDIR: 0x48f69d0 (libc.so.6:strcasecmp_l) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--1341-- REDIR: 0x48f6550 (libc.so.6:memchr) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--1341-- REDIR: 0x4912ab0 (libc.so.6:wcslen) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--1341-- REDIR: 0x48f5c60 (libc.so.6:strspn) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--1341-- REDIR: 0x48f68d0 (libc.so.6:stpncpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--1341-- REDIR: 0x48f6870 (libc.so.6:stpcpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--1341-- REDIR: 0x48f7e10 (libc.so.6:strchrnul) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--1341-- REDIR: 0x48f6a20 (libc.so.6:strncasecmp_l) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--1341-- REDIR: 0x49de490 (libc.so.6:__strrchr_avx2) redirected to 0x483ea10 (rindex)
+--1341-- REDIR: 0x48f0260 (libc.so.6:malloc) redirected to 0x483b780 (malloc)
+--1341-- REDIR: 0x48f6120 (libc.so.6:__GI_strstr) redirected to 0x4843ca0 (__strstr_sse2)
+--1341-- REDIR: 0x49de070 (libc.so.6:__strchr_avx2) redirected to 0x483ebf0 (index)
+--1341-- REDIR: 0x48f0850 (libc.so.6:free) redirected to 0x483c9d0 (free)
+==1341== Invalid write of size 8
+==1341==    at 0x109852: read_in_file (connect4.c:153)
+==1341==    by 0x10938C: main (main.c:8)
+==1341==  Address 0x4a496a8 is 24 bytes inside a block of size 40 free'd
+==1341==    at 0x483CA3F: free (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1341==    by 0x1097D0: read_in_file (connect4.c:138)
+==1341==    by 0x10938C: main (main.c:8)
+==1341==  Block was alloc'd at
+==1341==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1341==    by 0x10969F: read_in_file (connect4.c:102)
+==1341==    by 0x10938C: main (main.c:8)
+==1341== 
+==1341== Conditional jump or move depends on uninitialised value(s)
+==1341==    at 0x109ECE: write_out_file (connect4.c:201)
+==1341==    by 0x1093AE: main (main.c:11)
+==1341==  Uninitialised value was created by a heap allocation
+==1341==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1341==    by 0x10969F: read_in_file (connect4.c:102)
+==1341==    by 0x10938C: main (main.c:8)
+==1341== 
+==1341== Conditional jump or move depends on uninitialised value(s)
+==1341==    at 0x109EF6: write_out_file (connect4.c:196)
+==1341==    by 0x1093AE: main (main.c:11)
+==1341==  Uninitialised value was created by a heap allocation
+==1341==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1341==    by 0x10969F: read_in_file (connect4.c:102)
+==1341==    by 0x10938C: main (main.c:8)
+==1341== 
+==1341== Conditional jump or move depends on uninitialised value(s)
+==1341==    at 0x10A2F0: current_winner (connect4.c:294)
+==1341==    by 0x109444: main (main.c:13)
+==1341==  Uninitialised value was created by a heap allocation
+==1341==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1341==    by 0x10969F: read_in_file (connect4.c:102)
+==1341==    by 0x10938C: main (main.c:8)
+==1341== 
+==1341== Conditional jump or move depends on uninitialised value(s)
+==1341==    at 0x10A307: current_winner (connect4.c:290)
+==1341==    by 0x109444: main (main.c:13)
+==1341==  Uninitialised value was created by a heap allocation
+==1341==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1341==    by 0x10969F: read_in_file (connect4.c:102)
+==1341==    by 0x10938C: main (main.c:8)
+==1341== 
+==1341== Conditional jump or move depends on uninitialised value(s)
+==1341==    at 0x109F72: next_player (connect4.c:262)
+==1341==    by 0x10A3C0: read_in_move (connect4.c:382)
+==1341==    by 0x1093C4: main (main.c:14)
+==1341==  Uninitialised value was created by a heap allocation
+==1341==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1341==    by 0x10969F: read_in_file (connect4.c:102)
+==1341==    by 0x10938C: main (main.c:8)
+==1341== 
+==1341== Conditional jump or move depends on uninitialised value(s)
+==1341==    at 0x109F85: next_player (connect4.c:260)
+==1341==    by 0x10A3C0: read_in_move (connect4.c:382)
+==1341==    by 0x1093C4: main (main.c:14)
+==1341==  Uninitialised value was created by a heap allocation
+==1341==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1341==    by 0x10969F: read_in_file (connect4.c:102)
+==1341==    by 0x10938C: main (main.c:8)
+==1341== 
+--1341-- REDIR: 0x49de2a0 (libc.so.6:__strchrnul_avx2) redirected to 0x4843540 (strchrnul)
+--1341-- REDIR: 0x49e1650 (libc.so.6:__mempcpy_avx_unaligned_erms) redirected to 0x4843660 (mempcpy)
+--1341-- REDIR: 0x49de660 (libc.so.6:__strlen_avx2) redirected to 0x483ef40 (strlen)
+==1341== Conditional jump or move depends on uninitialised value(s)
+==1341==    at 0x483EF49: strlen (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1341==    by 0x10A400: read_in_move (connect4.c:384)
+==1341==    by 0x1093C4: main (main.c:14)
+==1341==  Uninitialised value was created by a stack allocation
+==1341==    at 0x10A37C: read_in_move (connect4.c:374)
+==1341== 
+==1341== Conditional jump or move depends on uninitialised value(s)
+==1341==    at 0x483EF58: strlen (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1341==    by 0x10A400: read_in_move (connect4.c:384)
+==1341==    by 0x1093C4: main (main.c:14)
+==1341==  Uninitialised value was created by a stack allocation
+==1341==    at 0x10A37C: read_in_move (connect4.c:374)
+==1341== 
+==1341== Use of uninitialised value of size 8
+==1341==    at 0x10A435: read_in_move (connect4.c:386)
+==1341==    by 0x1093C4: main (main.c:14)
+==1341==  Uninitialised value was created by a stack allocation
+==1341==    at 0x10A37C: read_in_move (connect4.c:374)
+==1341== 
+==1341== 
+==1341== Process terminating with default action of signal 2 (SIGINT)
+==1341==    at 0x4964142: read (read.c:26)
+==1341==    by 0x48E6D1E: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:517)
+==1341==    by 0x48E8105: _IO_default_uflow (genops.c:362)
+==1341==    by 0x48BA3FF: __vfscanf_internal (vfscanf-internal.c:627)
+==1341==    by 0x48B92E1: __isoc99_scanf (isoc99_scanf.c:30)
+==1341==    by 0x10A3F1: read_in_move (connect4.c:383)
+==1341==    by 0x1093C4: main (main.c:14)
+==1341== 
+==1341== HEAP SUMMARY:
+==1341==     in use at exit: 2,736 bytes in 59 blocks
+==1341==   total heap usage: 70 allocs, 11 frees, 9,632 bytes allocated
+==1341== 
+==1341== Searching for pointers to 59 not-freed blocks
+==1341== Checked 77,112 bytes
+==1341== 
+==1341== 8 bytes in 1 blocks are definitely lost in loss record 1 of 4
+==1341==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1341==    by 0x109926: read_in_file (connect4.c:174)
+==1341==    by 0x10938C: main (main.c:8)
+==1341== 
+==1341== 40 bytes in 1 blocks are still reachable in loss record 2 of 4
+==1341==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1341==    by 0x1094AB: setup_board (connect4.c:35)
+==1341==    by 0x10935E: main (main.c:6)
+==1341== 
+==1341== 448 bytes in 1 blocks are still reachable in loss record 3 of 4
+==1341==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1341==    by 0x1098E5: read_in_file (connect4.c:169)
+==1341==    by 0x10938C: main (main.c:8)
+==1341== 
+==1341== 2,240 bytes in 56 blocks are still reachable in loss record 4 of 4
+==1341==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1341==    by 0x10969F: read_in_file (connect4.c:102)
+==1341==    by 0x10938C: main (main.c:8)
+==1341== 
+==1341== LEAK SUMMARY:
+==1341==    definitely lost: 8 bytes in 1 blocks
+==1341==    indirectly lost: 0 bytes in 0 blocks
+==1341==      possibly lost: 0 bytes in 0 blocks
+==1341==    still reachable: 2,728 bytes in 58 blocks
+==1341==         suppressed: 0 bytes in 0 blocks
+==1341== 
+==1341== ERROR SUMMARY: 48 errors from 11 contexts (suppressed: 0 from 0)
+==1341== 
+==1341== 1 errors in context 1 of 11:
+==1341== Conditional jump or move depends on uninitialised value(s)
+==1341==    at 0x483EF49: strlen (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1341==    by 0x10A400: read_in_move (connect4.c:384)
+==1341==    by 0x1093C4: main (main.c:14)
+==1341==  Uninitialised value was created by a stack allocation
+==1341==    at 0x10A37C: read_in_move (connect4.c:374)
+==1341== 
+==1341== 
+==1341== 1 errors in context 2 of 11:
+==1341== Conditional jump or move depends on uninitialised value(s)
+==1341==    at 0x10A307: current_winner (connect4.c:290)
+==1341==    by 0x109444: main (main.c:13)
+==1341==  Uninitialised value was created by a heap allocation
+==1341==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1341==    by 0x10969F: read_in_file (connect4.c:102)
+==1341==    by 0x10938C: main (main.c:8)
+==1341== 
+==1341== 
+==1341== 1 errors in context 3 of 11:
+==1341== Conditional jump or move depends on uninitialised value(s)
+==1341==    at 0x109EF6: write_out_file (connect4.c:196)
+==1341==    by 0x1093AE: main (main.c:11)
+==1341==  Uninitialised value was created by a heap allocation
+==1341==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1341==    by 0x10969F: read_in_file (connect4.c:102)
+==1341==    by 0x10938C: main (main.c:8)
+==1341== 
+==1341== 
+==1341== 2 errors in context 4 of 11:
+==1341== Conditional jump or move depends on uninitialised value(s)
+==1341==    at 0x109F85: next_player (connect4.c:260)
+==1341==    by 0x10A3C0: read_in_move (connect4.c:382)
+==1341==    by 0x1093C4: main (main.c:14)
+==1341==  Uninitialised value was created by a heap allocation
+==1341==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1341==    by 0x10969F: read_in_file (connect4.c:102)
+==1341==    by 0x10938C: main (main.c:8)
+==1341== 
+==1341== 
+==1341== 4 errors in context 5 of 11:
+==1341== Use of uninitialised value of size 8
+==1341==    at 0x10A435: read_in_move (connect4.c:386)
+==1341==    by 0x1093C4: main (main.c:14)
+==1341==  Uninitialised value was created by a stack allocation
+==1341==    at 0x10A37C: read_in_move (connect4.c:374)
+==1341== 
+==1341== 
+==1341== 4 errors in context 6 of 11:
+==1341== Conditional jump or move depends on uninitialised value(s)
+==1341==    at 0x483EF58: strlen (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1341==    by 0x10A400: read_in_move (connect4.c:384)
+==1341==    by 0x1093C4: main (main.c:14)
+==1341==  Uninitialised value was created by a stack allocation
+==1341==    at 0x10A37C: read_in_move (connect4.c:374)
+==1341== 
+==1341== 
+==1341== 6 errors in context 7 of 11:
+==1341== Invalid write of size 8
+==1341==    at 0x109852: read_in_file (connect4.c:153)
+==1341==    by 0x10938C: main (main.c:8)
+==1341==  Address 0x4a496a8 is 24 bytes inside a block of size 40 free'd
+==1341==    at 0x483CA3F: free (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1341==    by 0x1097D0: read_in_file (connect4.c:138)
+==1341==    by 0x10938C: main (main.c:8)
+==1341==  Block was alloc'd at
+==1341==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1341==    by 0x10969F: read_in_file (connect4.c:102)
+==1341==    by 0x10938C: main (main.c:8)
+==1341== 
+==1341== 
+==1341== 7 errors in context 8 of 11:
+==1341== Conditional jump or move depends on uninitialised value(s)
+==1341==    at 0x10A2F0: current_winner (connect4.c:294)
+==1341==    by 0x109444: main (main.c:13)
+==1341==  Uninitialised value was created by a heap allocation
+==1341==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1341==    by 0x10969F: read_in_file (connect4.c:102)
+==1341==    by 0x10938C: main (main.c:8)
+==1341== 
+==1341== 
+==1341== 7 errors in context 9 of 11:
+==1341== Conditional jump or move depends on uninitialised value(s)
+==1341==    at 0x109ECE: write_out_file (connect4.c:201)
+==1341==    by 0x1093AE: main (main.c:11)
+==1341==  Uninitialised value was created by a heap allocation
+==1341==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1341==    by 0x10969F: read_in_file (connect4.c:102)
+==1341==    by 0x10938C: main (main.c:8)
+==1341== 
+==1341== 
+==1341== 14 errors in context 10 of 11:
+==1341== Conditional jump or move depends on uninitialised value(s)
+==1341==    at 0x109F72: next_player (connect4.c:262)
+==1341==    by 0x10A3C0: read_in_move (connect4.c:382)
+==1341==    by 0x1093C4: main (main.c:14)
+==1341==  Uninitialised value was created by a heap allocation
+==1341==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1341==    by 0x10969F: read_in_file (connect4.c:102)
+==1341==    by 0x10938C: main (main.c:8)
+==1341== 
+==1341== ERROR SUMMARY: 48 errors from 11 contexts (suppressed: 0 from 0)

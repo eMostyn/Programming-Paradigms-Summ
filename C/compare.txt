@@ -1,0 +1,183 @@
+
+
+
+
+
+
+
+
+
+
+
+
+                      exit(1);
+                      fprintf(stderr,"%s\n"," Failed to reserve memory for line");
+                    break;
+                    break;
+                    eof = 1;
+                    exit(1);
+                    fprintf(stderr,"%s\n"," Failed to reserve memory for strings");
+                    if (line == NULL)
+                    line = (char *) realloc(line, (lineSize+INITIAL_BUFFER)*(sizeof(char)));
+                    {
+                    }
+                  else if(character == '\n'){
+                  exit(1);
+                  fprintf(stderr,"%s\n"," Failed to reserve memory for line");
+                  if (strings == NULL)
+                  if(fscanf(infile,"%c",&character)==EOF){
+                  if(lineSize>INITIAL_BUFFER){
+                  lineSize++;
+                  line[pos] = character;
+                  pos++;
+                  strings = (char **) realloc(strings, (amountOfStrings+INITIAL_BUFFER)* sizeof(char*));
+                  {
+                  }
+                  }
+                  }
+                  }
+                amountOfStrings++;
+                char *line = malloc(1*(sizeof(char)));
+                char character = 's';
+                free(line);
+                if(amountOfStrings>INITIAL_BUFFER){
+                if(line == NULL){
+                int lineSize = 1;
+                int pos = 0;
+                line[pos+1] = '\0';
+                strcpy(strings[stringPos],line);
+                stringPos++;
+                strings[stringPos] = malloc(sizeof(line));
+                while(character != '\n'){
+                }
+                }
+                }
+              amountOfStrings = stringPos;
+              exit(1);
+              fOpened = 1;
+              fclose(infile);
+              fprintf(stderr,"Unable to create/find output file");
+              int eof = 0;
+              int stringPos = 0;
+              while(eof==0){
+              }
+            char* inputFileName = argv[i];
+            char* outputFileName = argv[i];
+            exit(1);
+            fprintf(stderr,"%s%s\n",argv[i]," is not a valid argument");
+            i++;
+            if(infile){
+            if(outfile == NULL){
+            infile = fopen(inputFileName,"r");
+            numerical = 1;
+            outfile = fopen(outputFileName,"w");
+            reversed = 1;
+            }
+            }
+          break;
+          break;
+          break;
+          break;
+          break;
+          case 'h':
+          case 'n':
+          case 'r':
+          case'o':
+          default:
+          fprintf(outfile,"%s\n",strings[i] );
+          fprintf(stdout,"%s\n",strings[i] );
+          printf("%s\n%s\n%s\n%s\n","-o specifies output file","-r reverses the sort order","-n for numerical values","Currently implemented, reverse, output file and numerical values");
+        ;
+        break;
+        for(int i =0;i<amountOfStrings;i++){
+        for(int i =0;i<amountOfStrings;i++){
+        fprintf(outfile,"%s\n",strings[i] );
+        fprintf(stdout,"%s\n",strings[i] );
+        switch(argv[i][1]){
+        }
+        }
+        }
+      //Arg is the file in input
+      case'-':
+      default :
+      else{
+      for(int i =amountOfStrings-1;i>=0;i--){
+      for(int i =amountOfStrings-1;i>=0;i--){
+      if(outfile != NULL){
+      }
+      }
+      }
+      }
+    break;
+    break;
+    break;
+    break;
+    case 0:
+    case 0:
+    case 1:
+    case 1:
+    else{
+    exit(1);
+    exit(1);
+    exit(1);
+    fprintf(stderr,"%s\n"," Failed to reserve memory for strings");
+    fprintf(stderr,"Invalid number of arguments");
+    fprintf(stderr,"Unable to find input file\n");
+    i++;
+    if(outfile != NULL){
+    qsort(strings,amountOfStrings,sizeof(char *),compareNumericalStrings);
+    qsort(strings,amountOfStrings,sizeof(char *),compareStrings);
+    return aDigit - bDigit;
+    return strcmp(aa, bb);
+    switch(argv[i][0]){
+    }
+    }
+  //Convert them back to strings
+  //Find if there is a leading number, 0 if not
+  //If they're equal then sort by string
+  //Reversed and numerical change depending on options in commandline
+  //Sort by differnce in number
+  //break;
+  //return strcmp(aa, bb);
+  FILE *infile;
+  FILE *outfile;
+  char **strings = malloc(INITIAL_BUFFER * sizeof(char*));
+  const char* aa = *(const char **)a;
+  const char* aa = *(const char **)a;
+  const char* bb = *(const char **)b;
+  const char* bb = *(const char **)b;
+  else{
+  if(aDigit == bDigit){
+  if(argc==1){
+  if(fOpened == 0){
+  if(strings == NULL){
+  int aDigit = atoi(aa);
+  int amountOfStrings = 0;
+  int bDigit = atoi(bb);
+  int fOpened = 0;
+  int i = 1;
+  int numerical = 0;
+  int reversed = 0;
+  return strcmp(aa, bb);
+  switch(numerical){
+  switch(reversed){
+  while(i<argc){
+  }
+  }
+  }
+  }
+  }
+  }
+  }
+  }
+  }
+#define INITIAL_BUFFER 1
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+//  case 0:
+int compareStrings(const void* a, const void* b){
+int main( int argc, char *argv[] ){
+}
+}
+}
